@@ -9,9 +9,10 @@ public class HtmlBuilder {
         root.setName(rootName);
     }
 
-    public void addChild(String childName, String childText) {
+    public HtmlBuilder addChild(String childName, String childText) {
         HtmlElement e = new HtmlElement(childName, childText);
         root.addElement(e);
+        return this;
     }
 
     public void clear() {
